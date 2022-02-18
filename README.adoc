@@ -1,0 +1,35 @@
+= Alarm Setup
+:!toc-title:
+:!toc-placement:
+:toc:
+
+Set up standard alarm integrations for Vy's usecases
+
+toc::[]
+
+== Usage
+To use this module, just add it to your terraform!
+
+
+[source, hcl]
+----
+module "alarm_setup" {
+  source = "github.com/nsbno/terraform-aws-alarm-setup?ref=x.y.z"
+
+  service_name = "my-cool-service"
+
+  slack_lambda_name = "alarms-to-slack"
+  pager_duty_endpoint_urls = {
+    critical = "https://pagerduty.com/some-critical-endpoint"
+    degraded = "https://pagerduty.com/some-degraded-endpoint"
+  }
+}
+----
+
+== Relevant Repositories
+
+You can use these repos together with this repo!
+
+link:https://github.com/nsbno/terraform-aws-alarms[`nsbno/terraform-aws-alarms`]::
+Get ready set up CloudWatch alarms for a variety of usecases.
+Just plug in the SNS topics from this module, and you'll be set and ready to go!
