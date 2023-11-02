@@ -1,3 +1,7 @@
+= Deprecated
+
+Use link:https://github.com/nsbno/terraform-pagerduty-service[terraform-pagerduty-service] instead
+
 = Alarm Setup
 :!toc-title:
 :!toc-placement:
